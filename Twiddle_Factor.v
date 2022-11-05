@@ -10,8 +10,8 @@ reg [DATA_WIDTH-1:0] ROM_real [2**LOG2_NFFT - 1:0];
 reg [DATA_WIDTH-1:0] ROM_imag [2**LOG2_NFFT - 1:0];
 initial
 begin
-    $readmemb("W_real_16",ROM_real);
-    $readmemb("W_imag_16",ROM_imag);
+    $readmemb("W_real_32.txt",ROM_real);
+    $readmemb("W_imag_32.txt",ROM_imag);
 end
  
  always @(*) 
