@@ -2,8 +2,8 @@ module Twiddle_Factor
 #(parameter LOG2_NFFT = 5, //-------------LOG2 (FFT points)--------------//
             DATA_WIDTH = 16)
 (
-    input wire [DATA_WIDTH-1:0]     Address,
-    output reg [DATA_WIDTH-1:0]     Data_real, Data_imag 
+    input wire [DATA_WIDTH-1:0]     address,
+    output reg [DATA_WIDTH-1:0]     data_real, data_imag 
 );
 
 reg [DATA_WIDTH-1:0] ROM_real [2**LOG2_NFFT - 1:0];

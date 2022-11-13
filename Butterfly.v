@@ -5,7 +5,7 @@ module Butterfly #(
     input wire [DATA_WIDTH-1:0] in2_r, in2_i, 
     input wire [DATA_WIDTH-1:0] w_r, w_i,
     output reg [DATA_WIDTH-1:0] out1_r, out1_i, 
-    output reg [DATA_WIDTH-1:0] out2_r out2_i
+    output reg [DATA_WIDTH-1:0] out2_r, out2_i
 );
 
 //-------- out1 = [in1_r + in2_r*w_r - in2_i*w_i] + j[in1_i + in2_r*w_i + in2_i*w_r]
@@ -42,7 +42,7 @@ function [DATA_WIDTH-1:0] multiplication;
     begin
          term1 = in1[DATA_WIDTH-1]?-in1:in1;  //---absolute value of input----//
          term2 = in2[DATA_WIDTH-1]?-in2:in2;  //---absolute value of input----//
-         result1 = Term1*Term2;
+         result1 = term1*term2;
          result2 = in1[DATA_WIDTH-1] ^ in2[DATA_WIDTH-1]? -result1:result1;
          multiplication = result2 >> DATA_WIDTH/2; //--------resizing the result's number of bits-------//
 
