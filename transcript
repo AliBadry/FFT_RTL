@@ -1,3 +1,13 @@
 # vsim Multiplier 
 # Start time: 13:31:44 on Nov 13,2022
 # Loading work.Multiplier
+add wave -position insertpoint sim:/Multiplier/*
+force -freeze sim:/Multiplier/in1 0000011100000000 0
+force -freeze sim:/Multiplier/in2 0000001101000000 0
+run
+run
+force -freeze sim:/Multiplier/in1 1111100100000000 0
+run
+run
+# End time: 13:58:00 on Nov 13,2022, Elapsed time: 0:26:16
+# Errors: 0, Warnings: 0
