@@ -1,13 +1,184 @@
-# vsim Multiplier 
-# Start time: 13:31:44 on Nov 13,2022
+# vsim FFT32DIT_TB 
+# Start time: 12:55:54 on Jan 03,2023
+# Loading work.FFT32DIT_TB
+# Loading work.FFT32DIT
+# Loading work.Butterfly
 # Loading work.Multiplier
-add wave -position insertpoint sim:/Multiplier/*
-force -freeze sim:/Multiplier/in1 0000011100000000 0
-force -freeze sim:/Multiplier/in2 0000001101000000 0
-run
-run
-force -freeze sim:/Multiplier/in1 1111100100000000 0
-run
-run
-# End time: 13:58:00 on Nov 13,2022, Elapsed time: 0:26:16
+do run.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:56:07 on Jan 03,2023
+# vlog -reportprogress 300 ./FFT32DIT_TB.v 
+# -- Compiling module FFT32DIT_TB
+# 
+# Top level modules:
+# 	FFT32DIT_TB
+# End time: 12:56:07 on Jan 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:56:07 on Jan 03,2023
+# vlog -reportprogress 300 ./Butterfly.v 
+# -- Compiling module Butterfly
+# 
+# Top level modules:
+# 	Butterfly
+# End time: 12:56:07 on Jan 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:56:07 on Jan 03,2023
+# vlog -reportprogress 300 ./Multiplier.v 
+# -- Compiling module Multiplier
+# 
+# Top level modules:
+# 	Multiplier
+# End time: 12:56:07 on Jan 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:56:07 on Jan 03,2023
+# vlog -reportprogress 300 ./FFT32DIT.v 
+# -- Compiling module FFT32DIT
+# 
+# Top level modules:
+# 	FFT32DIT
+# End time: 12:56:07 on Jan 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:56:08 on Jan 03,2023, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0
+# vsim work.FFT32DIT_TB 
+# Start time: 12:56:08 on Jan 03,2023
+# Loading work.FFT32DIT_TB
+# Loading work.FFT32DIT
+# Loading work.Butterfly
+# Loading work.Multiplier
+# stage 1 success!
+# stage 2 success!
+# Error in BF3_out_r[         1] with difference =         16
+# Error in BF3_out_r[         5] with difference =         16
+# Error in BF3_out_r[         9] with difference =         16
+# Error in BF3_out_r[        13] with difference =         16
+# Error in BF3_out_r[        17] with difference =         16
+# Error in BF3_out_r[        21] with difference =         16
+# Error in BF3_out_r[        25] with difference =         16
+# Error in BF3_out_r[        29] with difference =         16
+# Error in BF3_out_i[         1] with difference =         14
+# Error in BF3_out_i[         3] with difference =          2
+# Error in BF3_out_i[         5] with difference =         15
+# Error in BF3_out_i[         7] with difference =          1
+# Error in BF3_out_i[         9] with difference =         14
+# Error in BF3_out_i[        11] with difference =          2
+# Error in BF3_out_i[        13] with difference =         15
+# Error in BF3_out_i[        15] with difference =          1
+# Error in BF3_out_i[        17] with difference =         14
+# Error in BF3_out_i[        19] with difference =          2
+# Error in BF3_out_i[        21] with difference =         15
+# Error in BF3_out_i[        23] with difference =          1
+# Error in BF3_out_i[        25] with difference =         14
+# Error in BF3_out_i[        27] with difference =          2
+# Error in BF3_out_i[        29] with difference =         15
+# Error in BF3_out_i[        31] with difference =          1
+# stage 3 success!
+# Error in BF4_out_r[         1] with difference =         49
+# Error in BF4_out_r[         2] with difference =         16
+# Error in BF4_out_r[         3] with difference =         16
+# Error in BF4_out_r[         5] with difference =          7
+# Error in BF4_out_r[         7] with difference =          7
+# Error in BF4_out_r[         9] with difference =         17
+# Error in BF4_out_r[        10] with difference =         16
+# Error in BF4_out_r[        11] with difference =         15
+# Error in BF4_out_r[        13] with difference =         39
+# Error in BF4_out_r[        15] with difference =          8
+# Error in BF4_out_r[        17] with difference =         49
+# Error in BF4_out_r[        18] with difference =         16
+# Error in BF4_out_r[        19] with difference =         16
+# Error in BF4_out_r[        21] with difference =          7
+# Error in BF4_out_r[        23] with difference =          7
+# Error in BF4_out_r[        25] with difference =         17
+# Error in BF4_out_r[        26] with difference =         16
+# Error in BF4_out_r[        27] with difference =         15
+# Error in BF4_out_r[        29] with difference =         39
+# Error in BF4_out_r[        31] with difference =          8
+# Error in BF4_out_i[         1] with difference =         42
+# Error in BF4_out_i[         2] with difference =         14
+# Error in BF4_out_i[         3] with difference =          9
+# Error in BF4_out_i[         5] with difference =         36
+# Error in BF4_out_i[         6] with difference =          2
+# Error in BF4_out_i[         7] with difference =         32
+# Error in BF4_out_i[         9] with difference =         14
+# Error in BF4_out_i[        10] with difference =         15
+# Error in BF4_out_i[        11] with difference =          4
+# Error in BF4_out_i[        13] with difference =          7
+# Error in BF4_out_i[        14] with difference =          1
+# Error in BF4_out_i[        15] with difference =         34
+# Error in BF4_out_i[        17] with difference =         42
+# Error in BF4_out_i[        18] with difference =         14
+# Error in BF4_out_i[        19] with difference =          9
+# Error in BF4_out_i[        21] with difference =         36
+# Error in BF4_out_i[        22] with difference =          2
+# Error in BF4_out_i[        23] with difference =         32
+# Error in BF4_out_i[        25] with difference =         14
+# Error in BF4_out_i[        26] with difference =         15
+# Error in BF4_out_i[        27] with difference =          4
+# Error in BF4_out_i[        29] with difference =          7
+# Error in BF4_out_i[        30] with difference =          1
+# Error in BF4_out_i[        31] with difference =         34
+# stage 4 success!
+# Error in stream_out_r[         1] with difference =        147
+# Error in stream_out_r[         2] with difference =         49
+# Error in stream_out_r[         3] with difference =         40
+# Error in stream_out_r[         4] with difference =         16
+# Error in stream_out_r[         5] with difference =         63
+# Error in stream_out_r[         6] with difference =         16
+# Error in stream_out_r[         7] with difference =         30
+# Error in stream_out_r[         9] with difference =          8
+# Error in stream_out_r[        10] with difference =          7
+# Error in stream_out_r[        11] with difference =         16
+# Error in stream_out_r[        13] with difference =          1
+# Error in stream_out_r[        14] with difference =          7
+# Error in stream_out_r[        15] with difference =         46
+# Error in stream_out_r[        17] with difference =         48
+# Error in stream_out_r[        18] with difference =         17
+# Error in stream_out_r[        19] with difference =          9
+# Error in stream_out_r[        20] with difference =         16
+# Error in stream_out_r[        21] with difference =         49
+# Error in stream_out_r[        22] with difference =         15
+# Error in stream_out_r[        23] with difference =         45
+# Error in stream_out_r[        25] with difference =         41
+# Error in stream_out_r[        26] with difference =         39
+# Error in stream_out_r[        27] with difference =         13
+# Error in stream_out_r[        29] with difference =         77
+# Error in stream_out_r[        30] with difference =          8
+# Error in stream_out_r[        31] with difference =         63
+# Error in stream_out_i[         1] with difference =        145
+# Error in stream_out_i[         2] with difference =         42
+# Error in stream_out_i[         3] with difference =          4
+# Error in stream_out_i[         4] with difference =         14
+# Error in stream_out_i[         5] with difference =         54
+# Error in stream_out_i[         6] with difference =          9
+# Error in stream_out_i[         7] with difference =         47
+# Error in stream_out_i[         9] with difference =         33
+# Error in stream_out_i[        10] with difference =         36
+# Error in stream_out_i[        11] with difference =         24
+# Error in stream_out_i[        12] with difference =          2
+# Error in stream_out_i[        13] with difference =         41
+# Error in stream_out_i[        14] with difference =         32
+# Error in stream_out_i[        15] with difference =         27
+# Error in stream_out_i[        17] with difference =         61
+# Error in stream_out_i[        18] with difference =         14
+# Error in stream_out_i[        19] with difference =         14
+# Error in stream_out_i[        20] with difference =         15
+# Error in stream_out_i[        21] with difference =         19
+# Error in stream_out_i[        22] with difference =          4
+# Error in stream_out_i[        23] with difference =         17
+# Error in stream_out_i[        25] with difference =          5
+# Error in stream_out_i[        26] with difference =          7
+# Error in stream_out_i[        27] with difference =         33
+# Error in stream_out_i[        28] with difference =          1
+# Error in stream_out_i[        29] with difference =         55
+# Error in stream_out_i[        30] with difference =         34
+# Error in stream_out_i[        31] with difference =         95
+# Final stage success! ........ CONGRATULATIONS ;)
+# ** Note: $stop    : ./FFT32DIT_TB.v(254)
+#    Time: 1037 ns  Iteration: 0  Instance: /FFT32DIT_TB
+# Break in Module FFT32DIT_TB at ./FFT32DIT_TB.v line 254
+exit
+# End time: 12:58:12 on Jan 03,2023, Elapsed time: 0:02:04
 # Errors: 0, Warnings: 0

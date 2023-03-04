@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dF:/aloshka/Graduation Project/Learning materials/Digital design/FFT/RTL
+dF:/aloshka/Graduation Project/Learning materials/Digital design/FFT/RTL
 vButterfly
-!s110 1667761691
+Z0 !s110 1672743367
 !i10b 1
-!s100 a>0RH5i6Y2H7VjbeYG6Im2
-ITdNG?E0eRL;F=]=<5Zd>;2
+!s100 1i7kL6RDCcWG[RXbmUV=h1
+II?9Ubk51zhD3R5m8ki4k50
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dF:/aloshka/Graduation Project/Learning materials/Digital design/FFT/RTL_ALI
-w1667761689
+Z2 dF:/Aloshka/Graduation Project/Learning materials/Digital design/FFT/Ali/RTL_ALI
+w1670946922
 8./Butterfly.v
 F./Butterfly.v
 L0 1
@@ -23,19 +23,82 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1667761691.000000
+Z4 !s108 1672743367.000000
 !s107 ./Butterfly.v|
-!s90 ./Butterfly.v|
+!s90 -reportprogress|300|./Butterfly.v|
 !i113 1
-Z4 tCvgOpt 0
+Z5 tCvgOpt 0
 n@butterfly
+vFFT
+!s110 1670925922
+!i10b 1
+!s100 9UlV6CT`M5gzD=]aJ_R@Y1
+IMV@N<OmC5Z<Rz3XHmHCQW3
+R1
+Z6 dF:/aloshka/Graduation Project/Learning materials/Digital design/FFT/RTL_ALI
+w1670925244
+8./FFT.v
+F./FFT.v
+L0 5
+R3
+r1
+!s85 0
+31
+!s108 1670925922.000000
+!s107 ./FFT.v|
+!s90 ./FFT.v|
+!i113 1
+R5
+n@f@f@t
+vFFT32DIT
+R0
+!i10b 1
+!s100 W;5IAlW^KM612<@C<2in>1
+IRYW75YKmk412:G=95f^C_2
+R1
+R2
+w1670950502
+8./FFT32DIT.v
+F./FFT32DIT.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./FFT32DIT.v|
+!s90 -reportprogress|300|./FFT32DIT.v|
+!i113 1
+R5
+n@f@f@t32@d@i@t
+vFFT32DIT_TB
+R0
+!i10b 1
+!s100 AA1g2]02bg3hh305Ig2^J1
+I@a4cXC43A2F1>eBThAG[=0
+R1
+R2
+w1670967801
+8./FFT32DIT_TB.v
+F./FFT32DIT_TB.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 ./FFT32DIT_TB.v|
+!s90 -reportprogress|300|./FFT32DIT_TB.v|
+!i113 1
+R5
+n@f@f@t32@d@i@t_@t@b
 vfft_tb
 !s110 1667761818
 !i10b 1
 !s100 X`JOh0U5ZSX?zAgb`c;__2
 IKQgYIk=ji[ACXn9z[i35e3
 R1
-R2
+R6
 w1667761781
 8./fft_tb.v
 F./fft_tb.v
@@ -48,15 +111,56 @@ r1
 !s107 ./fft_tb.v|
 !s90 ./fft_tb.v|
 !i113 1
-R4
-vMultiplier
-!s110 1668339095
+R5
+vFlip_Bits
+!s110 1670446192
 !i10b 1
-!s100 5eljfC@==72VRNnaRhIS20
-I4?0`k4l=hMNIieRTNgLDh3
+!s100 8Vjz8DjJSX?fLJCQz]A8Y2
+I8;daY9=D[gA5>;fW:VQV<0
+R1
+R6
+w1670446187
+8./Flip_Bits.v
+F./Flip_Bits.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1670446192.000000
+!s107 ./Flip_Bits.v|
+!s90 ./Flip_Bits.v|
+!i113 1
+R5
+n@flip_@bits
+vflip_bits
+!s110 1670440582
+!i10b 1
+!s100 l5ki[o8Li^Ck8kSP[cW^]1
+I0b9ema8VmEkmO5L0^:@Ff3
+R1
+R6
+w1670440580
+8./flip_bits.v
+F./flip_bits.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1670440582.000000
+!s107 ./flip_bits.v|
+!s90 ./flip_bits.v|
+!i113 1
+R5
+vMultiplier
+R0
+!i10b 1
+!s100 XeW6L5FU50l=HgGEhEm672
+IKL5cM<41XeikTeQBl^ann1
 R1
 R2
-w1668338984
+w1670950395
 8./Multiplier.v
 F./Multiplier.v
 L0 1
@@ -64,20 +168,20 @@ R3
 r1
 !s85 0
 31
-!s108 1668339095.000000
-!s107 ./Multiplier.v|
-!s90 ./Multiplier.v|
-!i113 1
 R4
+!s107 ./Multiplier.v|
+!s90 -reportprogress|300|./Multiplier.v|
+!i113 1
+R5
 n@multiplier
 vTwiddle_Factor
-!s110 1667639523
+!s110 1670933726
 !i10b 1
-!s100 46Am6fXbNjHcilAg8kBzj3
-IGT75:Y9SUk`PlUA4hI=Kz3
+!s100 Qol2O<@`LSzgBLiZY`O2I3
+IYBC<<Zj2]V7lEUd]bHnBi3
 R1
-R0
-w1667639443
+R6
+w1670926930
 8./Twiddle_Factor.v
 F./Twiddle_Factor.v
 L0 1
@@ -85,9 +189,9 @@ R3
 r1
 !s85 0
 31
-!s108 1667639523.000000
+!s108 1670933726.000000
 !s107 ./Twiddle_Factor.v|
 !s90 ./Twiddle_Factor.v|
 !i113 1
-R4
+R5
 n@twiddle_@factor

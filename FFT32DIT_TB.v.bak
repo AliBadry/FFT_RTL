@@ -1,0 +1,57 @@
+module FFT32DIT_TB #(
+    parameter    DATA_WIDTH = 32, 
+                    LOG2_NFFT = 5,   //log2(NFFT)    
+                    NFFT_POINTS = 2**LOG2_NFFT // Number of FFT points used
+) ();
+    
+    reg              clk; 
+    reg              rst;
+    reg  [DATA_WIDTH-1:0] stream_in_r   [0:NFFT_POINTS-1];
+    reg  [DATA_WIDTH-1:0] stream_in_i   [0:NFFT_POINTS-1];
+    wire [DATA_WIDTH-1:0] stream_out_r  [0:NFFT_POINTS-1];
+    wire [DATA_WIDTH-1:0] stream_out_i  [0:NFFT_POINTS-1];
+    integer i;
+
+initial begin
+    clk = 0;
+    rst = 1;
+
+    #12
+    rst = 0;
+    #5
+    rst = 1;
+    #20
+    for ( i=0;i< NFFT_POINTS; i=i+1) begin
+        stream_in_r[i] = {i, {2'b10000{1'b0}}};
+        stream_in_i[i] = 0;
+    end
+
+    #1000
+    $stop;
+end
+
+initial
+begin
+    forever #5 clk = !clk;    
+end
+
+
+FFT32DIT #(.DATA_WIDTH (DATA_WIDTH), .LOG2_NFFT(LOG2_NFFT), .NFFT_POINTS(NFFT_POINTS))
+    DUT (clk,rst, 
+        stream_in_r[0], stream_in_r[1], stream_in_r[2], stream_in_r[3], stream_in_r[4], stream_in_r[5], stream_in_r[6], stream_in_r[7], stream_in_r[8], stream_in_r[9], stream_in_r[10],
+        stream_in_r[11], stream_in_r[12], stream_in_r[13], stream_in_r[14], stream_in_r[15], stream_in_r[16], stream_in_r[17], stream_in_r[18], stream_in_r[19],stream_in_r[20],
+        stream_in_r[21], stream_in_r[22], stream_in_r[23], stream_in_r[24], stream_in_r[25], stream_in_r[26], stream_in_r[27], stream_in_r[28], stream_in_r[29],stream_in_r[30],
+        stream_in_r[31],
+        stream_in_i[0], stream_in_i[1], stream_in_i[2], stream_in_i[3], stream_in_i[4], stream_in_i[5], stream_in_i[6], stream_in_i[7], stream_in_i[8], stream_in_i[9], stream_in_i[10],
+        stream_in_i[11], stream_in_i[12], stream_in_i[13], stream_in_i[14], stream_in_i[15], stream_in_i[16], stream_in_i[17], stream_in_i[18], stream_in_i[19],stream_in_i[20],
+        stream_in_i[21], stream_in_i[22], stream_in_i[23], stream_in_i[24], stream_in_i[25], stream_in_i[26], stream_in_i[27], stream_in_i[28], stream_in_i[29],stream_in_i[30],
+        stream_in_i[31],
+        stream_out_r[0], stream_out_r[1], stream_out_r[2], stream_out_r[3], stream_out_r[4], stream_out_r[5], stream_out_r[6], stream_out_r[7], stream_out_r[8], stream_out_r[9], stream_out_r[10],
+        stream_out_r[11], stream_out_r[12], stream_out_r[13], stream_out_r[14], stream_out_r[15], stream_out_r[16], stream_out_r[17], stream_out_r[18], stream_out_r[19],stream_out_r[20],
+        stream_out_r[21], stream_out_r[22], stream_out_r[23], stream_out_r[24], stream_out_r[25], stream_out_r[26], stream_out_r[27], stream_out_r[28], stream_out_r[29],stream_out_r[30],
+        stream_out_r[31],
+        stream_out_i[0], stream_out_i[1], stream_out_i[2], stream_out_i[3], stream_out_i[4], stream_out_i[5], stream_out_i[6], stream_out_i[7], stream_out_i[8], stream_out_i[9], stream_out_i[10],
+        stream_out_i[11], stream_out_i[12], stream_out_i[13], stream_out_i[14], stream_out_i[15], stream_out_i[16], stream_out_i[17], stream_out_i[18], stream_out_i[19],stream_out_i[20],
+        stream_out_i[21], stream_out_i[22], stream_out_i[23], stream_out_i[24], stream_out_i[25], stream_out_i[26], stream_out_i[27], stream_out_i[28], stream_out_i[29],stream_out_i[30], stream_out_i[31]
+        );
+endmodule

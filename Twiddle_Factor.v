@@ -1,13 +1,13 @@
 module Twiddle_Factor 
 #(parameter LOG2_NFFT = 5, //-------------LOG2 (FFT points)--------------//
-            DATA_WIDTH = 16)
+            DATA_WIDTH = 32)
 (
-    input wire [DATA_WIDTH-1:0]     address,
+    input wire [LOG2_NFFT-1:0]      address,
     output reg [DATA_WIDTH-1:0]     data_real, data_imag 
 );
 
-reg [DATA_WIDTH-1:0] ROM_real [2**LOG2_NFFT - 1:0];
-reg [DATA_WIDTH-1:0] ROM_imag [2**LOG2_NFFT - 1:0];
+reg [DATA_WIDTH-1:0] ROM_imag [2**(LOG2_NFFT-1) - 1:0];
+reg [DATA_WIDTH-1:0] ROM_real [2**(LOG2_NFFT-1) - 1:0];
 initial
 begin
     $readmemb("W_real_32.txt",ROM_real);
@@ -16,7 +16,7 @@ end
  
  always @(*) 
  begin
-    Data_real = ROM_real[Address];
-    Data_imag = ROM_imag[Address];   
+    data_real = ROM_real[address];
+    data_imag = ROM_imag[address];   
  end
 endmodule
